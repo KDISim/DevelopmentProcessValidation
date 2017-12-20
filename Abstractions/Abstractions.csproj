@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackage>True</IsPackage>
+    <TargetFramework>net461</TargetFramework>
+    <AssemblyName>DevelopmentProcessValidation.Abstractions</AssemblyName>
+    <RootNamespace>DevelopmentProcessValidation.Abstractions</RootNamespace>
+    <PackageId>KDISim.DevelopmentProcessValidation.Abstractions</PackageId>
+    <Authors>Sander Aernouts, Terje Sandstrom, Kim Vedvik</Authors>
+    <Copyright>(c) Sander Aernouts, Terje Sandstrom, Kim Vedvik, 2017</Copyright>
+    <Description>Interfaces and abstractions for DevelopmentProcessValidation.</Description>
+    <PackageProjectUrl>https://github.com/KDISim/DevelopmentProcessValidation</PackageProjectUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="VisualStudio.Files.Abstractions" Version="0.1.0" />
+  </ItemGroup>
+</Project>

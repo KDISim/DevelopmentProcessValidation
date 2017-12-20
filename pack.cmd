@@ -1,0 +1,1 @@
+dotnet pack /p:Version=%1 --output %~dp0nuget

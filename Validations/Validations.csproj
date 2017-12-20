@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackage>True</IsPackage>
+    <TargetFramework>net461</TargetFramework>
+    <AssemblyName>DevelopmentProcessValidation.Validations</AssemblyName>
+    <RootNamespace>DevelopmentProcessValidation.Validations</RootNamespace>
+    <PackageId>KDISim.DevelopmentProcessValidation.Validations</PackageId>
+    <Authors>Sander Aernouts, Terje Sandstrom, Kim Vedvik</Authors>
+    <Copyright>(c) Sander Aernouts, Terje Sandstrom, Kim Vedvik, 2017</Copyright>
+    <Description>A set of validations to catch common mistakes that may occur during the development process.</Description>
+    <PackageProjectUrl>https://github.com/KDISim/DevelopmentProcessValidation</PackageProjectUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abstractions\Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="VisualStudio.Files.Abstractions" Version="0.1.0" />
+  </ItemGroup>
+</Project>
