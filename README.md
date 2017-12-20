@@ -1,9 +1,9 @@
 A set of validations to catch common mistakes that may occur during the development process. This library uses [VisualStudio.Files](https://github.com/sanderaernouts/VisualStudio.Files) to parse the solution and project files.
 
-#PackagesConfigValidation
+# PackagesConfigValidation
 Parses all .csproj files in the solution and validates that there are no references to files that belong to a NuGet package that is not present in the packages.config file for that project.
 
-##Usage
+## Usage
 ```c#
 var solutionReader = SolutionReaderFactory.Create();
 var projectFileParser = new ProjectFileParser();
