@@ -24,6 +24,9 @@
     <Content Include="TestData\ProjectWithImportPackageReferences.csproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TestData\ProjectWithMicrosoftVisualStudioTextTemplatingHintpathPackageReferences.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestData\ProjectWithMultiplePackageReferences.csproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

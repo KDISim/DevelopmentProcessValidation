@@ -10,7 +10,7 @@ namespace DevelopmentProcessValidation.Validations
 {
     public class ProjectFileParser : IProjectFileParser
     {
-        private const string PackageReferencePattern = @"packages\\(?<id>.+?)\.(?<version>(\d+\.)+\d+(-.+?)?)\\";
+        private const string PackageReferencePattern = @"packages\\(?<id>.+?(\.(\d+\.0))?)\.(?<version>(\d+\.)+\d+(-.+?)?)\\";
         
         public IEnumerable<IProjectFilePackageReference> ParsePackageReferences(IProject project)
         {

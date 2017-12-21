@@ -131,5 +131,34 @@ namespace DevelopmentProcessValidation.Validations.Tests
             var references = ParsePackageReferences(project);
             Assert.That(references.Count(), Is.EqualTo(3));
         }
+        
+        [Test]
+        public void ParsePackageReferencesReturnAllTheRightPackageIdWhenVisualStudioTextTemplatingIsReferenced()
+        {
+            var project = Substitute.For<IProject>();
+            project.File.Returns(File(@"TestData\ProjectWithMicrosoftVisualStudioTextTemplatingHintpathPackageReferences.csproj"));
+            
+            var references = ParsePackageReferences(project);
+            Assert.Multiple(() =>
+            {
+                Assert.That(references.Count(), Is.EqualTo(4));
+                Assert.That(
+                    references.Any(r =>
+                        r.Id.Equals("Microsoft.VisualStudio.TextTemplating.15.0") && r.Version.Equals("15.4.27004")),
+                    Is.True);
+                Assert.That(
+                    references.Any(r =>
+                        r.Id.Equals("Microsoft.VisualStudio.TextTemplating.Interfaces.10.0") && r.Version.Equals("10.0.30319")),
+                    Is.True);
+                Assert.That(
+                    references.Any(r =>
+                        r.Id.Equals("Microsoft.VisualStudio.TextTemplating.Interfaces.11.0") && r.Version.Equals("11.0.50727")),
+                    Is.True);
+                Assert.That(
+                    references.Any(r =>
+                        r.Id.Equals("Microsoft.VisualStudio.TextTemplating.Interfaces.15.0") && r.Version.Equals("15.4.27004")),
+                    Is.True);
+            });
+        }
     }
 }
