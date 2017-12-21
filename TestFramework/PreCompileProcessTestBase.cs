@@ -6,6 +6,7 @@ using NUnit.Framework;
 
 namespace DevelopmentProcessValidation.TestFramework
 {
+    [Category("Process")]
     [Category("PreCompile")]
     public abstract class PreCompileProcessTestBase
     {
