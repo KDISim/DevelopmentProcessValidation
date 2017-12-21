@@ -68,7 +68,7 @@ namespace DevelopmentProcessValidation.Validations.Tests
             project.Packages.Returns(packages);
         }
 
-        private PackagesConfigValidationResult InvokeSolutionIsValid(string path)
+        private IPackagesConfigValidationResult InvokeSolutionIsValid(string path)
         {
             var result = _validation.ValidateSolution(path);
             
@@ -78,7 +78,7 @@ namespace DevelopmentProcessValidation.Validations.Tests
             return result;
         }
         
-        private PackagesConfigValidationResult InvokeSolutionIsValid()
+        private IPackagesConfigValidationResult InvokeSolutionIsValid()
         {
             return InvokeSolutionIsValid(DefaultPath);
         }

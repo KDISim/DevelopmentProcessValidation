@@ -7,7 +7,7 @@ using VisualStudio.Files.Abstractions;
 
 namespace DevelopmentProcessValidation.Validations
 {
-    public class PackagesConfigValidation
+    public class PackagesConfigValidation : IPackagesConfigValidation
     {
         private readonly ISolutionReader _solutionReader;
         private readonly IProjectFileParser _projectFileParser;
@@ -19,7 +19,7 @@ namespace DevelopmentProcessValidation.Validations
                 projectFileParser ?? throw new ArgumentNullException(nameof(projectFileParser));
         }
 
-        public PackagesConfigValidationResult ValidateSolution(string path)
+        public IPackagesConfigValidationResult ValidateSolution(string path)
         {
             if (string.IsNullOrWhiteSpace(path))
             {

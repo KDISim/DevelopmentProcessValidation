@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+    <AssemblyName>DevelopmentProcessValidation.TestFramework</AssemblyName>
+    <RootNamespace>DevelopmentProcessValidation.TestFramework</RootNamespace>
+    <PackageId>KDISim.DevelopmentProcessValidation.TestFramework</PackageId>
+    <Authors>Sander Aernouts, Terje Sandstrom, Kim Vedvik</Authors>
+    <Copyright>(c) Sander Aernouts, Terje Sandstrom, Kim Vedvik, 2017</Copyright>
+    <Description>NUnit based framework for running process validations as NUnit tests.</Description>
+    <PackageProjectUrl>https://github.com/KDISim/DevelopmentProcessValidation</PackageProjectUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="VisualStudio.Files.Core" Version="0.1.0" />
+    <PackageReference Include="NUnit" Version="3.9.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Validations\Validations.csproj" />
+  </ItemGroup>
+</Project>
