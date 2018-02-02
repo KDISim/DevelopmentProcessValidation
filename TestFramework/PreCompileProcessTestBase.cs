@@ -10,8 +10,7 @@ namespace DevelopmentProcessValidation.TestFramework
     [Category("PreCompile")]
     public abstract class PreCompileProcessTestBase
     {
-        [Test]
-        public void ProjectsDoNotReferencePackagesThatAreNotInPackagesConfigFile()
+        public void ValidateThat_ProjectsDoNotReferencePackagesThatAreNotInPackagesConfigFile()
         {
             var validation = PackagesConfigValidationFactory.Create();
             var solutionFile = SolutionFile.Locate();

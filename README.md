@@ -27,6 +27,11 @@ Add a class to you test or process test project that contains the following:
 ```c#
 public sealed class PreCompileProcessTest : PreCompileProcessTestBase
 {
+    [Test]
+    public void PreCompileTests() 
+    {
+        ValidateThat_ProjectsDoNotReferencePackagesThatAreNotInPackagesConfigFile();
+    }
 }
 ```
 
